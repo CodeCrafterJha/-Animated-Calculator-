@@ -1,0 +1,131 @@
+/* Calculator Container */
+#calculator {
+  border: 1px solid #ccc;
+  width: 90%;
+  max-width: 300px;
+  margin: 10vh auto;
+  border-radius: 25px;
+  padding: 20px;
+  background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Title */
+#title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Display */
+#display {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  width: 20%;
+  aspect-ratio: 1/1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.92);
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: ripple-effect 0.6s linear;
+  pointer-events: none;
+}
+
+/* Ripple Keyframes */
+@keyframes ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 500px) {
+  #title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  #calculator {
+    padding: 15px;
+  }
+
+  #display {
+    font-size: 1.3rem;
+  }
+}
+
+/* Body Background */
+#body {
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Subtitle */
+#subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-top: -10px;
+}
